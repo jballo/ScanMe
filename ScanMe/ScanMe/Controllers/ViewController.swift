@@ -83,21 +83,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 var lorem = "qwertyuiopasdjfsadflsdjfxzcnvxz"
                 self.ConvertedTxt.text = text
 //                self.ConvertedTxt.text = lorem
+                print(text)
             }
-             //print(text) // text we get from image
+             print(text) // text we get from image
         }
-        
-//        let request = VNRecognizeTextRequest { request, error in
-//
-//            guard let observations = request.results as
-//                    [VNRecognizedTextObservation],
-//                  error == nil else { return }
-//            let text = observations.compactMap({
-//                $0.topCandidates(1).first?.string
-//            }).joined(separator: ", ")
-//            print(text)
-//
-//        }
         
         request.recognitionLevel = VNRequestTextRecognitionLevel.accurate
         do{

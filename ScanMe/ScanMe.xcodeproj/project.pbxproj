@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F1116D5028F115BA59B5CCB2 /* Pods_ScanMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC8690B351D92EEFFF8D0BA /* Pods_ScanMe.framework */; };
+		F903EC1129D96F510079CF03 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F903EC1029D96F510079CF03 /* EntryController.swift */; };
 		F92DE1E129D4151400CEAC61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DE1E029D4151400CEAC61 /* AppDelegate.swift */; };
 		F92DE1E329D4151400CEAC61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DE1E229D4151400CEAC61 /* SceneDelegate.swift */; };
 		F92DE1E529D4151400CEAC61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92DE1E429D4151400CEAC61 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		1DDEB4802E20E1FBC310A4D5 /* Pods-ScanMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanMe.debug.xcconfig"; path = "Target Support Files/Pods-ScanMe/Pods-ScanMe.debug.xcconfig"; sourceTree = "<group>"; };
 		7B20DAA78181153FE6C4CF7F /* Pods-ScanMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScanMe.release.xcconfig"; path = "Target Support Files/Pods-ScanMe/Pods-ScanMe.release.xcconfig"; sourceTree = "<group>"; };
 		CAC8690B351D92EEFFF8D0BA /* Pods_ScanMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScanMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F903EC1029D96F510079CF03 /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
 		F92DE1DD29D4151400CEAC61 /* ScanMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScanMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92DE1E029D4151400CEAC61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F92DE1E229D4151400CEAC61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F903EC0F29D96ECD0079CF03 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F92DE1E429D4151400CEAC61 /* ViewController.swift */,
+				F903EC1029D96F510079CF03 /* EntryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		F92DE1D429D4151400CEAC61 = {
 			isa = PBXGroup;
 			children = (
@@ -80,9 +91,9 @@
 		F92DE1DF29D4151400CEAC61 /* ScanMe */ = {
 			isa = PBXGroup;
 			children = (
+				F903EC0F29D96ECD0079CF03 /* Controllers */,
 				F92DE1E029D4151400CEAC61 /* AppDelegate.swift */,
 				F92DE1E229D4151400CEAC61 /* SceneDelegate.swift */,
-				F92DE1E429D4151400CEAC61 /* ViewController.swift */,
 				F92DE1E629D4151400CEAC61 /* Main.storyboard */,
 				F92DE1E929D4151500CEAC61 /* Assets.xcassets */,
 				F92DE1EB29D4151500CEAC61 /* LaunchScreen.storyboard */,
@@ -208,6 +219,7 @@
 			files = (
 				F92DE1E529D4151400CEAC61 /* ViewController.swift in Sources */,
 				F92DE1E129D4151400CEAC61 /* AppDelegate.swift in Sources */,
+				F903EC1129D96F510079CF03 /* EntryController.swift in Sources */,
 				F92DE1E329D4151400CEAC61 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +383,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ballo.ScanMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -402,6 +415,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ballo.ScanMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
