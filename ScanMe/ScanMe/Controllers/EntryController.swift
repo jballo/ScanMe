@@ -9,7 +9,7 @@ import UIKit
 import AlamofireImage
 import Vision
 
-class EntryController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EntryController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var CompanyCameraBttn: UIButton!
     @IBOutlet weak var ModelNoCameraBttn: UIButton!
@@ -41,7 +41,11 @@ class EntryController: UIViewController, UIImagePickerControllerDelegate, UINavi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.CompanyTextField.delegate = self
+        self.SerialNoTextField.delegate = self
+        self.ModelNoTextField.delegate = self
+        self.LocationTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -274,6 +278,11 @@ class EntryController: UIViewController, UIImagePickerControllerDelegate, UINavi
             self.currentBttn = nil
         }
 //        dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 
