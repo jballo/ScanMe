@@ -32,6 +32,12 @@ class EntryController: UIViewController, UIImagePickerControllerDelegate, UINavi
     var serialNoPhoto: UIImage? = nil
     var locationPhoto: UIImage? = nil
     
+    
+    let alertMessage = UIAlertController(title: "Missing", message: "Missing Required Fields", preferredStyle: .alert)
+    
+    let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+        print("Cancel button tapped")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,6 +150,17 @@ class EntryController: UIViewController, UIImagePickerControllerDelegate, UINavi
             || (location == "Not Processed" || location == "")
         ){
             print("Missing Required Fields")
+            let alertMessage = UIAlertController(title: "Missing", message: "Missing Required Fields", preferredStyle: .alert)
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+                print("Cancel button tapped")
+            }
+            
+            alertMessage.addAction(cancel)
+            
+            self.present(alertMessage, animated: true, completion: nil)
+            
+            
         }
         
         
